@@ -4,30 +4,26 @@ using UnityEngine;
 
 public class ScaleReticle : MonoBehaviour
 {
-    public float scaleSpeed = 0.05f;
+    public float scaleSpeed = 0.4f;
     public float maxScale = 1.2f;
     public float minScale = 1;
-    private Vector3 scaleVector;
     private bool isScalingUp = true;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        scaleVector = new Vector3(scaleSpeed, scaleSpeed, scaleSpeed);
-    }
+    private float timeScaleSpeed;
 
     // Update is called once per frame
     void Update()
     {
+        timeScaleSpeed = Time.deltaTime * scaleSpeed;
+
         if (isScalingUp)
         {
-            transform.localScale += scaleVector;
+            transform.localScale += new Vector3(timeScaleSpeed, timeScaleSpeed, timeScaleSpeed);
             if (transform.localScale.x > maxScale)
                 isScalingUp = false;
         }
         else
         {
-            transform.localScale -= scaleVector;
+            transform.localScale -= new Vector3(timeScaleSpeed, timeScaleSpeed, timeScaleSpeed);
             if (transform.localScale.x < minScale)
                 isScalingUp = true;
         }
