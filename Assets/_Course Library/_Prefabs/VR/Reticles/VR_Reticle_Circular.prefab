@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 4955246626782319643}
   - component: {fileID: 7142820903540285649}
   - component: {fileID: 6456300268410306199}
+  - component: {fileID: -2959900153999377304}
   m_Layer: 0
   m_Name: VR_Reticle_Circular
   m_TagString: Untagged
@@ -91,9 +92,24 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8656087483511947524}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0bc914d39bdde4aad883213019421dc6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 100
+--- !u!114 &-2959900153999377304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8656087483511947524}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5346e6ac6ade74e9fa7a8b56ff783cf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scaleSpeed: 0.4
+  maxScale: 1.2
+  minScale: 1
